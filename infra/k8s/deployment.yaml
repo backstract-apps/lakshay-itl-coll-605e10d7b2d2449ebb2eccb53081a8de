@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lakshay-itl-coll-605e10d7b2d2449ebb2eccb53081a8de-depl
+  labels:
+    app: lakshay-itl-coll-605e10d7b2d2449ebb2eccb53081a8de
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lakshay-itl-coll-605e10d7b2d2449ebb2eccb53081a8de
+  template:
+    metadata:
+      labels:
+        app: lakshay-itl-coll-605e10d7b2d2449ebb2eccb53081a8de
+    spec:
+      containers:
+        - name: lakshay-itl-coll-605e10d7b2d2449ebb2eccb53081a8de
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:lakshay-itl-coll-605e10d7b2d2449ebb2eccb53081a8de
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9014
